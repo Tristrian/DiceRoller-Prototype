@@ -1,0 +1,11 @@
+[
+    {
+        "modid": "diceroller",
+        "name": "Dice Roller",
+        "version": "1.0",
+        "description": "Roll dices with modifiers",
+        "requiredMods": [
+            "spongeapi@5.1.0-SNAPSHOT"
+        ]
+    }
+]
