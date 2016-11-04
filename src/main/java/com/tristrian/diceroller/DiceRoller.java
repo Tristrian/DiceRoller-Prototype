@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.tristrian.diceroller;
 
 import com.google.inject.Inject;
@@ -18,10 +13,6 @@ import org.spongepowered.api.event.game.state.GameStoppingServerEvent;
 import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.text.Text;
 
-/**
- *
- * @author AlmeidaCorreiaT
- */
 @Plugin(id = "diceroller", name = "Dice Roller", version = "1.0", description = "Roll dices with modifiers")
 public class DiceRoller {
 
