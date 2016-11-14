@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.tristrian.diceroller;
 
 import java.util.ArrayList;
@@ -7,6 +12,10 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
+/**
+ *
+ * @author AlmeidaCorreiaT
+ */
 public class Parser {
 
     private final Roller roller;
@@ -25,6 +34,7 @@ public class Parser {
     public ArrayList<Integer> parseCommand(String string) {
         result = new ArrayList<>();
         String[] argument = string.split(" ");
+        //On vérifie s'il s'agit de la argument dndroll
         for (String argument1 : argument) {
             diceResult = new ArrayList<>();
             dicesArg = new ArrayList<>();

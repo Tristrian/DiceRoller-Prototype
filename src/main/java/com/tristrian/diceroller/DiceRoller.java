@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.tristrian.diceroller;
 
 import com.google.inject.Inject;
@@ -13,6 +18,10 @@ import org.spongepowered.api.event.game.state.GameStoppingServerEvent;
 import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.text.Text;
 
+/**
+ *
+ * @author AlmeidaCorreiaT
+ */
 @Plugin(id = "diceroller", name = "Dice Roller", version = "1.0", description = "Roll dices with modifiers")
 public class DiceRoller {
 
@@ -21,12 +30,12 @@ public class DiceRoller {
 
     @Listener
     public void onServerStart(GameStartingServerEvent event) {
-        logger.info("Démarrage de DiceRoller");
+        logger.info("Starting DiceRoller");
         CommandSpec rollDice = CommandSpec.builder()
-                .description(Text.of("Roll a dice"))
+                .description(Text.of("Roll a dice with the following formula : XdY. X is the number of dices to roll, and Y is the number of faces."))
                 .permission("diceroller.command.roll")
                 .arguments(
-                        GenericArguments.string(Text.of("dice"))
+                        GenericArguments.string(Text.of("formula"))
                 )
                 .executor(new CommandRoll())
                 .build();
@@ -35,6 +44,6 @@ public class DiceRoller {
     }
 
     public void onServerClose(GameStoppingServerEvent event) {
-        logger.info("Arrêt de DiceRoller");
+        logger.info("Stopping DiceRoller");
     }
 }
